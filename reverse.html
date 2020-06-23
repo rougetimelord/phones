@@ -1,0 +1,19 @@
+<title>Reverse number hell</title>
+<script src="./reverse.js"></script>
+<body>
+    <h2>Enter your phone number:</h2>
+    <label for=input>
+        Type in reverse:
+        <input type="tel" name="input" id="input" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" size=10 title="Format: 0987-654-321" placeholder="0987-654-321" required>
+        <div>
+            <small>Format: 0987-654-321</small>
+        </div>
+    </span>
+    <div style="margin-top:1rem">
+        Is this your number? 
+        <span style="font-weight: bold" id="output"></span>
+    </div>
+    <div style="margin-top: .5em;">
+        <input type="button" value="Submit" onclick="submit()">
+    </div>
+</body>
