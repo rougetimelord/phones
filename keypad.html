@@ -1,0 +1,46 @@
+<head>
+    <title>Hell Keypad</title>
+    <script src="keypad.js"></script>
+    <style>
+        .numbercontainer{
+            margin-top: 1rem;
+            display: grid;
+            column-gap: 0.25em;
+            row-gap: 0.25em;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .numbercontainer > div {
+            text-align: center;
+        }
+        .number {
+            height: 3em;
+            width: 3em;
+        }
+        #box10{
+            grid-column: 2 / span 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter your number:</h2>
+    <div class="numbercontainer">
+        <div class="number" id="box1"></div>
+        <div class="number" id="box2"></div>
+        <div class="number" id="box3"></div>
+        <div class="number" id="box4"></div>
+        <div class="number" id="box5"></div>
+        <div class="number" id="box6"></div>
+        <div class="number" id="box7"></div>
+        <div class="number" id="box8"></div>
+        <div class="number" id="box9"></div>
+        <div class="number" id="box10"></div>
+    </div>
+    <div id="outcontainer">
+        Is this your number?
+        <div id="out"></div>
+    </div>
+    <div style="margin-top: .5em;">
+        <input type="button" value="Submit" onclick="submit()">
+    </div>
+</body>
