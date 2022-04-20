@@ -61,7 +61,6 @@ let generateBoxes = () => {
 
 let clickHandler = (ev) => {
     ev.preventDefault();
-    if (output.length >= 12) {output = ""};
     switch (output.length){
         case 3:
         case 6:
