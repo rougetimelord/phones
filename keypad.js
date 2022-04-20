@@ -67,6 +67,8 @@ let clickHandler = (ev) => {
         case 6:
             output += "-"+ev.target.innerText;
             break;
+        case 12:
+            output = "";
         default:
             output += ev.target.innerText;
     }
