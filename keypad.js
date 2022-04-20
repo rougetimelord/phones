@@ -61,8 +61,15 @@ let generateBoxes = () => {
 
 let clickHandler = (ev) => {
     ev.preventDefault();
-    if (output.length >= 10) {output = ""};
-    output += ev.target.innerText;
+    if (output.length >= 12) {output = ""};
+    switch (output.length){
+        case 3:
+        case 6:
+            output += "-"+ev.target.innerText;
+            break;
+        default:
+            output += ev.target.innerText;
+    }
     document.getElementById("out").innerText = output;
     generateBoxes();
 }
