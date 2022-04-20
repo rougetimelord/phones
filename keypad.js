@@ -51,24 +51,23 @@ let generateBoxes = () => {
     let localNumbers = shuffle(numbers)
     //Fill boxes
     for(let i = 0; i < boxNames.length; i++) {
-        let color = pickColor();
-        let number = localNumbers[i];
-        let el = document.getElementById(boxNames[i])
+        let el = document.getElementById(boxNames[i]);
 
-        el.innerText = number;
-        el.style.backgroundColor = color
+        el.innerText = localNumbers[i];
+        el.style.backgroundColor = pickColor();
     }
     return
 }
 
 let clickHandler = (ev) => {
-    ev.preventDefault()
-    if (output.length >= 10) {output = ""}
-    output += ev.target.innerText
-    document.getElementById("out").innerText = output
+    ev.preventDefault();
+    if (output.length >= 10) {output = ""};
+    output += ev.target.innerText;
+    document.getElementById("out").innerText = output;
+    generateBoxes();
 }
 
 boxNames.forEach(box => {
-    document.getElementById(box).addEventListener("click", clickHandler)
+    document.getElementById(box).addEventListener("click", clickHandler);
 })
-generateBoxes()
+generateBoxes();
