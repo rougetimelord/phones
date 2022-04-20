@@ -29,6 +29,8 @@ const cssColors = [
     "whitesmoke"
 ]
 
+let output = ""
+
 let shuffle = a => {
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
@@ -58,3 +60,15 @@ let generateBoxes = () => {
     }
     return
 }
+
+let clickHandler = (ev) => {
+    ev.preventDefault()
+    if (output.length >= 10) {output = ""}
+    output += ev.target.innerText
+    document.getElementById("out").innerText = output
+}
+
+boxNames.forEach(box => {
+    document.getElementById(box).addEventListener("click", clickHandler)
+})
+generateBoxes()

@@ -7,8 +7,8 @@
             display: grid;
             column-gap: 0.25em;
             row-gap: 0.25em;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 3em 3em 3em;
+            grid-template-rows: 3em 3em 3em 3em;
         }
         .numbercontainer > div {
             text-align: center;
@@ -38,7 +38,7 @@
     </div>
     <div id="outcontainer">
         Is this your number?
-        <div id="out"></div>
+        <span id="out" style="font-weight: bold;"></span>
     </div>
     <div style="margin-top: .5em;">
         <input type="button" value="Submit" onclick="submit()">
