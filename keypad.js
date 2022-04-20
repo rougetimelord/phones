@@ -63,7 +63,7 @@ let clickHandler = (ev) => {
     ev.preventDefault();
     switch (output.length){
         case 3:
-        case 6:
+        case 7:
             output += "-"+ev.target.innerText;
             break;
         case 12:
