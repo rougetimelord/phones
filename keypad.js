@@ -55,6 +55,7 @@ let generateBoxes = () => {
 
         el.innerText = localNumbers[i];
         el.style.backgroundColor = pickColor();
+        el.style.border = `1px ${["dashed", "solid", "dotted"][Math.floor(Math.random()*3)]} ${pickColor()}`; 
     }
     return
 }
